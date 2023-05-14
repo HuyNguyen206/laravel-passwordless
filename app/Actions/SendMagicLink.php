@@ -35,6 +35,6 @@ class SendMagicLink
     {
         $this->handle($request->all());
 
-        return back()->with('success', request()->get('type', 'login') ? 'Login success' : 'Register success!');
+        return back()->with('success', request()->get('type', 'login') ? 'Send login magic link success!' : 'Send register magic link success!');
     }
 }
