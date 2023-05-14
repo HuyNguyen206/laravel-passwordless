@@ -22,7 +22,8 @@ class RegisterEmailTest extends TestCase
         User::factory()->create([  'email' => 'huy@gmail.com']);
 
         $this->post('register-email', [
-            'email' => 'huy@gmail.com'
+            'email' => 'huy@gmail.com',
+            'type' => 'register'
         ])->assertSessionHasErrors(['email']);
     }
 
